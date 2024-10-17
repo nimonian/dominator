@@ -17,6 +17,9 @@
     "test:008": "mocha exercises/008.test.js",
     "test:009": "mocha exercises/009.test.js"
   },
+  "stackblitz": {
+    "startCommand": "npm install live-server && npm run dev"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
