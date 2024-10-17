@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "live-server src --port=8080",
     "test": "mocha exercises/*.test.js",
     "test:001": "mocha exercises/001.test.js",
     "test:002": "mocha exercises/002.test.js",
