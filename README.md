@@ -25,6 +25,12 @@ Just click the `<> Code` button at the top of this page on github.com, and
 create a new Codespace to work in. Everything will install automatically for you
 and you can move on to the interesting stuff.
 
+### Option 3: Stackblitz
+
+Codespaces not working out? You could try opening this in Stackblitz:
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/github/corndel-swe/dominator)
+
 ## Exercises
 
 In the `exercises` folder, you will find some short challenges. In the comments
