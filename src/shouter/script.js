@@ -1,7 +1,2 @@
-const btn = document.querySelector('#btn')
-
-btn.addEventListener('click', () => {
-  const txt = document.querySelector('#txt').value
-  const output = document.querySelector('#output')
-  output.innerText = txt.toUpperCase()
-})
+// TODO: get a reference to the #button and #txt and #output
+// TODO: add an event listener to the #button that changes the text in #output to the uppercase value of #txt
