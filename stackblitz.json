@@ -1,0 +1,4 @@
+{
+  "installDependencies": true,
+  "startCommand": "npm install live-server && npm install"
+}
