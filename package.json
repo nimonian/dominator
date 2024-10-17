@@ -1,0 +1,25 @@
+{
+  "name": "dominator",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha exercises/*.test.js",
+    "test:001": "mocha exercises/001.test.js",
+    "test:002": "mocha exercises/002.test.js",
+    "test:003": "mocha exercises/003.test.js",
+    "test:004": "mocha exercises/004.test.js",
+    "test:005": "mocha exercises/005.test.js",
+    "test:006": "mocha exercises/006.test.js",
+    "test:007": "mocha exercises/007.test.js",
+    "test:008": "mocha exercises/008.test.js",
+    "test:009": "mocha exercises/009.test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.7.3"
+  }
+}
