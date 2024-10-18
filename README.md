@@ -1,5 +1,9 @@
 # DOMinator
 
+<p align="center">
+  <img width="200px" src="logo.png" />
+</p>
+
 This repo aims to introduce you to the basics of JavaScript.
 
 - The `exercises` focus on learning some JavaScript syntax.
