@@ -1,0 +1,110 @@
+name: Autograding Tests
+'on':
+  - push
+  - repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Problem 001
+        id: problem-001
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Problem 001
+          setup-command: npm install
+          command: npm run test:001
+          timeout: 1
+          max-score: 1
+      - name: Problem 002
+        id: problem-002
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Problem 002
+          setup-command: npm install
+          command: npm run test:002
+          timeout: 1
+          max-score: 1
+      - name: Problem 003
+        id: problem-003
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Problem 003
+          setup-command: npm install
+          command: npm run test:003
+          timeout: 1
+          max-score: 1
+      - name: Problem 004
+        id: problem-004
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Problem 004
+          setup-command: npm install
+          command: npm run test:004
+          timeout: 1
+          max-score: 1
+      - name: Problem 005
+        id: problem-005
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Problem 005
+          setup-command: npm install
+          command: npm run test:005
+          timeout: 1
+          max-score: 1
+      - name: Problem 006
+        id: problem-006
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Problem 006
+          setup-command: npm install
+          command: npm run test:006
+          timeout: 1
+          max-score: 1
+      - name: Problem 007
+        id: problem-007
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Problem 007
+          setup-command: npm install
+          command: npm run test:007
+          timeout: 1
+          max-score: 1
+      - name: Problem 008
+        id: problem-008
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Problem 008
+          setup-command: npm install
+          command: npm run test:008
+          timeout: 1
+          max-score: 1
+      - name: Problem 009
+        id: problem-009
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Problem 009
+          setup-command: npm install
+          command: npm run test:009
+          timeout: 1
+          max-score: 1
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          PROBLEM-001_RESULTS: '${{steps.problem-001.outputs.result}}'
+          PROBLEM-002_RESULTS: '${{steps.problem-002.outputs.result}}'
+          PROBLEM-003_RESULTS: '${{steps.problem-003.outputs.result}}'
+          PROBLEM-004_RESULTS: '${{steps.problem-004.outputs.result}}'
+          PROBLEM-005_RESULTS: '${{steps.problem-005.outputs.result}}'
+          PROBLEM-006_RESULTS: '${{steps.problem-006.outputs.result}}'
+          PROBLEM-007_RESULTS: '${{steps.problem-007.outputs.result}}'
+          PROBLEM-008_RESULTS: '${{steps.problem-008.outputs.result}}'
+          PROBLEM-009_RESULTS: '${{steps.problem-009.outputs.result}}'
+        with:
+          runners: problem-001,problem-002,problem-003,problem-004,problem-005,problem-006,problem-007,problem-008,problem-009
